@@ -5,6 +5,8 @@ import com.company.operations.*;
 
 import java.util.*;
 
+
+//Алгоритм сортировочной станции,упрощенный до операции типа 2+2
 public class RomanParser implements ParserStrategy {
     final String SPACE = " ";
     DataStorage dataStorage = new DataStorage();

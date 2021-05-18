@@ -6,6 +6,8 @@ import com.company.operations.*;
 import java.util.Map;
 import java.util.Stack;
 
+
+//Алгоритм сортировочной станции,упрощенный до операции типа 2+2
 public class ArabicParser implements  ParserStrategy{
     final String SPACE = " ";
 
