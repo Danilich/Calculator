@@ -3,7 +3,7 @@ package com.company.outputs;
 public class RomanOutput implements OutputStrategy{
     @Override
     public String output(int exp) {
-        if(exp==0){
+        if(exp<=0){
             throw new ArithmeticException("Значение не существует");
         }
       return intToRoman(exp);

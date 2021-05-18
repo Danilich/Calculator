@@ -7,6 +7,8 @@ import java.util.*;
 
 
 //Алгоритм сортировочной станции,упрощенный до операции типа 2+2
+//Ввод :   II+II
+//Результат: 2 2 +
 public class RomanParser implements ParserStrategy {
     final String SPACE = " ";
     DataStorage dataStorage = new DataStorage();
@@ -19,8 +21,7 @@ public class RomanParser implements ParserStrategy {
         Stack<ArithmeticOperator> operatorStack = new Stack<>();
 
         final Map<Character,
-                Integer> romanTable = new HashMap<Character,
-                Integer>() {{
+                Integer> romanTable = new HashMap< >() {{
             put('I', 1);
             put('V', 5);
             put('X', 10);
@@ -60,7 +61,8 @@ public class RomanParser implements ParserStrategy {
 
     public static int romanToInt(String s,Map<Character,
             Integer> roman) {
-        int sum = 0;
+
+        int num = 0;
         int n = s.length();
         for (int i = 0; i < n; i++) {
 
@@ -68,16 +70,20 @@ public class RomanParser implements ParserStrategy {
             if (i < n-1 && roman.get(s.charAt(i)) <
                     roman.get(s.charAt(i + 1))) {
 
-                sum += roman.get(s.charAt(i + 1)) -
+                num += roman.get(s.charAt(i + 1)) -
                         roman.get(s.charAt(i));
-                sb.append(sum);
+                sb.append(num);
 
                 i++;
             } else {
-                sum += roman.get(s.charAt(i));
+                num += roman.get(s.charAt(i));
             }
         }
+        if(num>=11){
+            throw  new IllegalArgumentException("Число больше 10!");
+        }
 
-        return sum;
+
+        return num;
     }
 }

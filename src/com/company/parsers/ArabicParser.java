@@ -8,6 +8,8 @@ import java.util.Stack;
 
 
 //Алгоритм сортировочной станции,упрощенный до операции типа 2+2
+//Ввод :   2+2
+//Результат: 2 2+
 public class ArabicParser implements  ParserStrategy{
     final String SPACE = " ";
 
@@ -43,7 +45,6 @@ public class ArabicParser implements  ParserStrategy{
                 operatorStack.push(operator);
             }
         }
-
         while (!operatorStack.isEmpty()) {
             output.append(operatorStack.pop()).append(SPACE);
         }

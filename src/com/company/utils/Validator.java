@@ -7,7 +7,7 @@ public class Validator {
 
 
 public static boolean isDigits(String name){
-    String regex = "((\\b([1-9 ]|10)\\b)\\s?+[\\\\+\\-*/]{1}(\\b([1-9 ]|10)\\b)\\s?+)+([\\\\+\\-*/]{1}(\\b([1-9 ]|10)\\b)\\s?+)*";
+    String regex = "((\\b([1-9 ]|10)\\b)\\s?+[\\\\+\\-*/]{1}(\\b([1-9 ]|10)\\b)\\s?+)";
     Pattern p = Pattern.compile(regex);
     if (name == null) {
         return false;
@@ -17,7 +17,7 @@ public static boolean isDigits(String name){
 }
     public static boolean isRoman(String name)
     {
-        String regex = "([XVI ]+[\\\\+\\-*/]{1}[XVI ]+)+([\\\\+\\-*/]{1}[XVI ]+)*";
+        String regex = "([XVI ]+[\\\\+\\-*/]{1}[XVI ]+)";
         Pattern p = Pattern.compile(regex);
         if (name == null) {
             return false;

@@ -9,8 +9,8 @@ import com.company.utils.Validator;
 
 public class SimpleCalculator {
 
-    String calculate(String exps){
-        String result="";
+    public String calculate(String exps){
+        String result;
         CalculatorContext calcContext = new CalculatorContext();
 
        if(Validator.isDigits(exps)){
@@ -27,14 +27,6 @@ public class SimpleCalculator {
 
         return result;
     }
-
-
-
-
-
-
-
-
 
 }
 
